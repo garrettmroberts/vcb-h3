@@ -1,0 +1,72 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #beef00;
+}
+
+h1 {
+  text-shadow: 3px 3px 12px #12343b;
+  padding-bottom: 15px;
+  color: #ff0028;
+  text-align: center;
+  font-size: 2em;
+}
+
+h2 {
+  padding: 15px 0px;
+  color: #ff0028;
+  font-size: 1.75em;
+}
+
+hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid #beef00;
+  border-radius: 2px;
+}
+
+#card {
+  box-shadow: 7px 7px 22px 0px #1000a0;
+  background-color: #1400c6;
+  border-radius: 9px;
+  text-align: center;
+}
+
+#passwordGenerator {
+  height: 150px;
+  background-color: azure;
+  width: 80vw;
+  max-width: 650px;
+  margin: 10px 30px;
+  border-radius: 9px;
+}
+
+button {
+  padding: 5px 15px;
+  font-size: 16px;
+  margin: 15px 10px;
+  border-radius: 5px;
+  background-color:#ff0028;
+  color: azure;
+}
+
+button:active {
+  background-color:#920016;
+}
+
+/* Bright Green: #beef00
+
+Electric Red: #ff0028
+
+Deep Green: #657a00
+
+Power Blue: #1400c6 */
