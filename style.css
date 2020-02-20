@@ -6,7 +6,6 @@
 
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -39,6 +38,7 @@ hr {
   background-color: #1400c6;
   border-radius: 9px;
   text-align: center;
+  margin: 0 auto;
 }
 
 #passwordGenerator {
@@ -64,6 +64,12 @@ button {
 
 button:active {
   background-color:#920016;
+}
+
+@media screen and (max-width: 600px) {
+  #card {
+    width: 95vw;
+  }
 }
 
 /* Bright Green: #beef00
