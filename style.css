@@ -72,6 +72,10 @@ button:active {
   }
 }
 
+#form1 {
+  display: none;
+}
+
 /* Bright Green: #beef00
 
 Electric Red: #ff0028
