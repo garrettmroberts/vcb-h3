@@ -1,3 +1,4 @@
+/* General Settings */
 *, html {
   margin: 0;
   padding: 0;
@@ -33,6 +34,7 @@ hr {
   border-radius: 2px;
 }
 
+/* Centered usable part of page */
 #card {
   box-shadow: 7px 7px 22px 0px #1000a0;
   background-color: #1400c6;
@@ -41,18 +43,48 @@ hr {
   margin: 0 auto;
 }
 
+/* Where all the magic happens */
 #passwordGenerator {
-  height: 150px;
+  height: 250px;
   background-color: azure;
   width: 80vw;
   max-width: 650px;
   margin: 10px 30px;
   border-radius: 9px;
   display: flex;
+}
+
+/* Form Settings: Hidden until targeted. */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
 
+.inline-buttons {
+  display: flex;
+}
+
+form p {
+  margin: 0 12px;
+}
+
+form input {
+  margin: 0 5px;
+}
+
+form button {
+  width: 40%;
+}
+
+label {
+  margin: 15px 0;
+}
+
+
+/* Button Classes */
 button {
   padding: 5px 15px;
   font-size: 16px;
@@ -60,19 +92,34 @@ button {
   border-radius: 5px;
   background-color:#ff0028;
   color: azure;
+  width: 50%;
 }
 
 button:active {
   background-color:#920016;
 }
 
+/* Media Queries*/
 @media screen and (max-width: 600px) {
   #card {
     width: 95vw;
   }
 }
 
+/* Form Selectors */
 #form1 {
+  display: none;
+}
+
+#form2 {
+  display: none;
+}
+
+#form3 {
+  display: none;
+}
+
+#form4 {
   display: none;
 }
 

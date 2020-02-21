@@ -14,16 +14,62 @@
         <h2>Generate a Password</h2>
         <hr>
         <div id="passwordGenerator">
-          <form id="form1">Let's get started. Would you like to use lowercase characters?</label>
-            <p>
-              <input type="radio" name="yes_no" checked>Yes</input>
-            </p>
-            <p>
-              <input type="radio" name="yes_no">No</input>
-            </p>
+
+          <!-- Form 1 -->
+          <form id="form1">
+            <label>Let's get started. Would you like to use lowercase characters?</label>
+            <div class="inline-buttons">
+              <p>
+                <input type="radio" name="yes_no" checked>Yes</input>
+              </p>
+              <p>
+                <input type="radio" name="yes_no">No</input>
+              </p>
+            </div>
             <button type="submit">Continue</button>
           </form>
-          <p>Placeholder</p>
+
+          <!-- Form 2 -->
+          <form id="form2">
+            <label>Would you like to use uppercase characters?</label>
+            <div class="inline-buttons">
+              <p>
+                <input type="radio" name="yes_no" checked>Yes</input>
+              </p>
+              <p>
+                <input type="radio" name="yes_no">No</input>
+              </p>
+            </div>
+            <button type="submit">Continue</button>
+          </form>
+
+          <!-- Form 3 -->
+          <form id="form3">
+            <label>Would you like to use numbers?</label>
+            <div class="inline-buttons">
+              <p>
+                <input type="radio" name="yes_no" checked>Yes</input>
+              </p>
+              <p>
+                <input type="radio" name="yes_no">No</input>
+              </p>
+            </div>
+            <button type="submit">Continue</button>
+          </form>
+
+          <!-- Form 4 -->
+          <form id="form4">
+            <label>Would you like to use special characters?</label>
+            <div class="inline-buttons">
+              <p>
+                <input type="radio" name="yes_no" checked>Yes</input>
+              </p>
+              <p>
+                <input type="radio" name="yes_no">No</input>
+              </p>
+            </div>
+            <button type="submit">Continue</button>
+          </form>
         </div>
         <hr>
         <button type="submit" id="startButton">Generate Password</button>

@@ -23,10 +23,12 @@ function getCharNumber() {
 // Form Updates
 // Asks user if they want lowercase letters
 function form1() {
-  var useLowerCase = confirm("Would you like to use lowercase letters?");
-  if (useLowerCase) {
-    passwordLibrary += lowerAlpha;
-  }
+  var form1text = document.getElementById("form1");
+  form1text.style.display = "inherit";
+  // var useLowerCase = confirm("Would you like to use lowercase letters?");
+  // if (useLowerCase) {
+  //   passwordLibrary += lowerAlpha;
+  // }
 }
 
 // Asks user if they want uppercase letters
@@ -63,14 +65,14 @@ function generate(numChars) {
 
 function updateUI() {
   passwordLibrary = "";
-  getCharNumber();
+  // getCharNumber();
   form1();
-  form2();
-  form3();
-  form4();
-  var newPassword = generate(numChars);
-  var formFace = document.getElementById("passwordGenerator");
-  formFace.innerText = newPassword;
+  // form2();
+  // form3();
+  // form4();
+  // var newPassword = generate(numChars);
+  // var formFace = document.getElementById("passwordGenerator");
+  // formFace.innerText = newPassword;
 }
 
 function collectUserInput() {
