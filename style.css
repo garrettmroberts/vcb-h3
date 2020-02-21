@@ -83,6 +83,10 @@ label {
   margin: 15px 0;
 }
 
+.numInput > input {
+  padding: 8px;
+}
+
 
 /* Button Classes */
 button {
@@ -120,6 +124,10 @@ button:active {
 }
 
 #form4 {
+  display: none;
+}
+
+#form5 {
   display: none;
 }
 
