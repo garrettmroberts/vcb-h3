@@ -14,6 +14,7 @@
 ## Known Bugs / Needs Adjustment
 
 - Color scheme is not color-blind friendly.
+- Longer passwords surpass the margins of the generator.
 - If the user chooses no characters to be included on a second run of the program, it locks up the window.
 
 ## Screenshot

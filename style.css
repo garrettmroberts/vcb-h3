@@ -105,6 +105,10 @@ button:active {
   background-color:#920016;
 }
 
+#passwordPlaceholder {
+  overflow: scroll;
+}
+
 /* Media Queries*/
 @media screen and (max-width: 600px) {
   #card {
