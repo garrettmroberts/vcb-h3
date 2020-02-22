@@ -17,7 +17,7 @@
 
           <!-- Form 1 -->
           <form id="form1">
-            <label>Let's get started. How long does your password need to be?</label>
+            <label>Let's get started. How long does your password need to be? (must be a number between 8 and 128)</label>
             <div class="numInput">
               <input type="number" min="8" max="128" />
             </div>
@@ -28,60 +28,41 @@
           <form id="form2">
             <label>Would you like to use lowercase characters?</label>
             <div class="inline-buttons">
-              <p>
-                <input type="radio" name="yes_no" checked>Yes</input>
-              </p>
-              <p>
-                <input type="radio" name="yes_no">No</input>
-              </p>
+              <button class="continueButton">Yes</button>
+              <button class="continueButton">No</button>
             </div>
-            <button type="submit">Continue</button>
           </form>
 
           <!-- Form 3 -->
           <form id="form3">
             <label>Would you like to use uppercase characters?</label>
             <div class="inline-buttons">
-              <p>
-                <input type="radio" name="yes_no" checked>Yes</input>
-              </p>
-              <p>
-                <input type="radio" name="yes_no">No</input>
-              </p>
+              <button class="continueButton">Yes</button>
+              <button class="continueButton">No</button>
             </div>
-            <button type="submit">Continue</button>
           </form>
 
           <!-- Form 4 -->
           <form id="form4">
             <label>Would you like to use numbers?</label>
             <div class="inline-buttons">
-              <p>
-                <input type="radio" name="yes_no" checked>Yes</input>
-              </p>
-              <p>
-                <input type="radio" name="yes_no">No</input>
-              </p>
+              <button class="continueButton">Yes</button>
+              <button class="continueButton">No</button>
             </div>
-            <button type="submit">Continue</button>
           </form>
 
           <!-- Form 5 -->
           <form id="form5">
             <label>Would you like to use special characters?</label>
             <div class="inline-buttons">
-              <p>
-                <input type="radio" name="yes_no" checked>Yes</input>
-              </p>
-              <p>
-                <input type="radio" name="yes_no">No</input>
-              </p>
+              <button class="continueButton">Yes</button>
+              <button class="continueButton">No</button>
             </div>
-            <button type="submit">Continue</button>
           </form>
+          <p id="passwordPlaceholder" class="checkForThis"></p>
         </div>
         <hr>
-        <button type="submit" id="startButton">Generate Password</button>
+        <button id="startButton">Generate Password</button>
       </div>
     </section>
   </div>

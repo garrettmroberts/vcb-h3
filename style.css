@@ -52,6 +52,8 @@ hr {
   margin: 10px 30px;
   border-radius: 9px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Form Settings: Hidden until targeted. */

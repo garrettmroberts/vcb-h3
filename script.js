@@ -3,78 +3,138 @@ var lowerAlpha="abcdefghijklmnopqrstuvwxyz";
 var upperAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var nums = "0123456789";
 var specialChars = "!\\\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+var passwordLength = 0;
 
 // Global passwordLibrary Variable
 var passwordLibrary = "";
 
-// Locates part of page to be updated
-var formFace = document.getElementById("passwordGenerator");
+var formFace = document.querySelector("#passwordGenerator");
 
+// Query selectors for forms and continue buttons
+var forms = document.querySelectorAll("form");
+var continueButtons = document.querySelectorAll(".continueButton");
 
 // Gives functionality to "start" button
-var updateButton = document.getElementById("startButton");
-updateButton.addEventListener('click', updateUI, false);
+var startButton = document.querySelector("#startButton");
+startButton.addEventListener('click', function() {
+  event.preventDefault();
+  updateUI();
+});
 
-// Gets number of chars needed from user.
-function getCharNumber() {
-  numChars = prompt("How long does your passcode need to be (in digits?)");
-}
+// This function calls on all remaining forms
+function runGenerator() {
+  forms[0].setAttribute("style", "display: inherit");
 
-// Form Updates
+  continueButtons[0].addEventListener("click", function() {
+    event.preventDefault();
+    var userInput = forms[0].children[1].firstElementChild.value;
+    if (userInput >= 8 && userInput <= 128) {
+      passwordLength = userInput;
+      forms[0].setAttribute("style", "display: none");
+      form2()
+    };
+  });
+};
+
 // Asks user if they want lowercase letters
-function form1() {
-  var form1text = document.getElementById("form1");
-  form1text.style.display = "inherit";
-  // var useLowerCase = confirm("Would you like to use lowercase letters?");
-  // if (useLowerCase) {
-  //   passwordLibrary += lowerAlpha;
-  // }
-}
+function form2() {
+  forms[1].setAttribute("style", "display: inherit");
+
+  continueButtons[1].addEventListener("click", function () {
+    event.preventDefault();
+    passwordLibrary += lowerAlpha;
+    forms[1].setAttribute("style", "display: none");
+    form3();
+  });
+  continueButtons[2].addEventListener("click", function() {
+    event.preventDefault();
+    forms[1].setAttribute("style", "display: none");
+    form3();
+  });
+};
 
 // Asks user if they want uppercase letters
-function form2() {
-  var useUpperCase = confirm("Would you like to use uppercase letters?");
-  if (useUpperCase) {
-    passwordLibrary += upperAlpha;
-  }
-}
-
-// Asks users if they want lowercase letters
 function form3() {
-  var useNums = confirm("Would you like to use numbers?");
-  if (useNums) {
-    passwordLibrary += nums;
-  }
+  forms[2].setAttribute("style", "display: inherit");
+
+  continueButtons[3].addEventListener("click", function () {
+    event.preventDefault();
+    passwordLibrary += upperAlpha;
+    forms[2].setAttribute("style", "display: none");
+    form4();
+  });
+  continueButtons[4].addEventListener("click", function () {
+    event.preventDefault();
+    forms[2].setAttribute("style", "display: none");
+    form4();
+  });
 }
 
+// Asks user if they want numbers
 function form4() {
-  var useSpecialChars = confirm("Would you like to use special characters?");
-  if (useSpecialChars) {
-    passwordLibrary += specialChars;
-  }
+  forms[3].setAttribute("style", "display: inherit");
+
+  continueButtons[5].addEventListener("click", function () {
+    event.preventDefault();
+    passwordLibrary += nums;
+    forms[3].setAttribute("style", "display: none");
+    form5();
+  });
+  continueButtons[6].addEventListener("click", function () {
+    event.preventDefault();
+    forms[3].setAttribute("style", "display: none");
+    form5();
+  });
 }
 
-function generate(numChars) {
+// Asks user if they want special letters
+function form5() {
+  forms[4].setAttribute("style", "display: inherit");
+
+  continueButtons[7].addEventListener("click", function () {
+    event.preventDefault();
+    passwordLibrary += specialChars;
+    forms[4].setAttribute("style", "display: none");
+
+    if (passwordLibrary.length > 0) {
+      var newPassword = generate(passwordLength);
+      var passwordPlaceholderEl = document.querySelector("#passwordPlaceholder")
+      passwordPlaceholderEl.innerText = newPassword;
+    } else {
+      alert("You need to select something! Refresh the page and try again.");
+    };
+  });
+
+  continueButtons[8].addEventListener("click", function () {
+    event.preventDefault();
+    forms[4].setAttribute("style", "display: none");
+
+    if (passwordLibrary.length > 0) {
+      var newPassword = generate(passwordLength);
+      var passwordPlaceholderEl = document.querySelector("#passwordPlaceholder")
+      passwordPlaceholderEl.innerText = newPassword;
+    } else {
+      alert("You need to select something! Refresh the page and try again.");
+    };
+  });
+};
+
+function generate(passwordLength) {
   var generatedPassword = "";
-  for (var i = 0; i < numChars; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     var charIndex = Math.floor(Math.random() * passwordLibrary.length);
     generatedPassword += passwordLibrary[charIndex];
-  }
+  };
   return generatedPassword;
-}
+};
 
 function updateUI() {
+  var reuseTest = document.querySelector("#passwordPlaceholder");
+  if (reuseTest.classList.value == "checkForThis") {
+    reuseTest.innerText = "";
+  };
   passwordLibrary = "";
-  // getCharNumber();
-  form1();
-  // form2();
-  // form3();
-  // form4();
-  // var newPassword = generate(numChars);
-  // var formFace = document.getElementById("passwordGenerator");
-  // formFace.innerText = newPassword;
-}
-
-function collectUserInput() {
-
+  passwordLength = 0;
+  
+  runGenerator();
 };
