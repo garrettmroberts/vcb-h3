@@ -10,34 +10,34 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #beef00;
+  background-image: url(./assets/images/y-so-serious-white.png);
 }
 
 h1 {
   text-shadow: 3px 3px 12px #12343b;
   padding-bottom: 15px;
-  color: #ff0028;
+  color: #5A9B37;
   text-align: center;
   font-size: 2em;
 }
 
 h2 {
   padding: 15px 0px;
-  color: #ff0028;
+  color: azure;
   font-size: 1.75em;
 }
 
 hr {
   width: 80%;
   margin: 0 auto;
-  border: 2px solid #beef00;
+  border: 2px solid #D0E7C3;
   border-radius: 2px;
 }
 
 /* Centered usable part of page */
 #card {
-  box-shadow: 7px 7px 22px 0px #1000a0;
-  background-color: #1400c6;
+  box-shadow: 7px 7px 22px 0px rgb(54, 94, 32);
+  background-color: rgb(74, 128, 45);
   border-radius: 9px;
   text-align: center;
   margin: 0 auto;
@@ -137,10 +137,8 @@ button:active {
   display: none;
 }
 
-/* Bright Green: #beef00
-
-Electric Red: #ff0028
-
-Deep Green: #657a00
-
-Power Blue: #1400c6 */
+.color-primary-0 { color: #99C97F }	/* Main Primary color */
+.color-primary-1 { color: #D0E7C3 }
+.color-primary-2 { color: #B9DEA5 }
+.color-primary-3 { color: #79B35A }
+.color-primary-4 { color: #5A9B37 }
