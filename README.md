@@ -11,10 +11,6 @@
 
 [Here](https://garrettmroberts.github.io/vcb-h3/)
 
-## Known Bugs / Needs Adjustment
-
-- If the user chooses no characters to be included on a second run of the program, it locks up the window.
-
 ## Screenshot
 
 ![screenshot of deployed app](assets/images/screenshot.png)

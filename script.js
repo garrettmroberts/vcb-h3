@@ -101,7 +101,8 @@ function form5() {
       var passwordPlaceholderEl = document.querySelector("#passwordPlaceholder")
       passwordPlaceholderEl.innerText = newPassword;
     } else {
-      alert("You need to select something! Refresh the page and try again.");
+      var passwordPlaceholderEl = document.querySelector("#passwordPlaceholder")
+      passwordPlaceholderEl.innerText = "You need to select something! Try again."
     };
   });
 
@@ -114,7 +115,8 @@ function form5() {
       var passwordPlaceholderEl = document.querySelector("#passwordPlaceholder")
       passwordPlaceholderEl.innerText = newPassword;
     } else {
-      alert("You need to select something! Refresh the page and try again.");
+      var passwordPlaceholderEl = document.querySelector("#passwordPlaceholder")
+      passwordPlaceholderEl.innerText = "You need to select something! Try again."
     };
   });
 };
